@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="Template">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Food template 1</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
-    its work
+
+    <div class="main-wrap" ng-controller="MainController" ng-class="{'main-wrap-display': true}">
+
+        test: {{testText}}
+
+    </div>
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+
 </body>
 </html>
