@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/redspirit/food_template_1/issues"
   },
-  "homepage": "https://github.com/redspirit/food_template_1#readme"
+  "homepage": "https://github.com/redspirit/food_template_1#readme",
+  "dependencies": {
+    "static-server": "^2.0.1"
+  }
 }

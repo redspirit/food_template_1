@@ -1,0 +1,23 @@
+{
+  "name": "food_template_1",
+  "description": "Шаблон №1",
+  "main": "index.js",
+  "authors": [
+    "Alexey Tayanchin"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/redspirit/food_template_1",
+  "moduleType": [
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0"
+  }
+}
