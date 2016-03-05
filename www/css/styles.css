@@ -17,9 +17,23 @@ body {
 
 .main-wrap{
     display: none;
-    width: 1220px;
+    width: 1200px;
     margin: 50px auto 0;
 }
 .main-wrap-display{
     display: block;
+}
+.left-bar{
+    width: 260px;
+    float: left;
+    background-color: #0185b7;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.right-bar{
+    margin-left: 260px;
+    background-color: white;
+    padding: 15px;
+    box-sizing: border-box;
 }
