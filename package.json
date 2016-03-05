@@ -1,0 +1,19 @@
+{
+  "name": "food_template_1",
+  "version": "1.0.0",
+  "description": "Шаблон №1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://redspirit@github.com/redspirit/food_template_1.git"
+  },
+  "author": "Alexey Tayanchin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/redspirit/food_template_1/issues"
+  },
+  "homepage": "https://github.com/redspirit/food_template_1#readme"
+}
