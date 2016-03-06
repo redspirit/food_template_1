@@ -57,8 +57,22 @@
         </div>
         <div class="right-bar">
 
-            test: {{testText}}
-            <p>Проверка текста, проверяем шрифт и все такое, чтобы норм <b>работало</b> и отображалось</p>
+            <div class="type-selector">
+                Обычное меню / комбо-обеды
+            </div>
+
+            <div class="categories" ng-repeat="(cat, catName) in categories">
+
+                <h3>{{catName}}</h3>
+
+                <div class="food-card" ng-repeat="item in items | filter:{category: cat}">
+
+                    {{item.name}}
+
+                </div>
+
+
+            </div>
 
         </div>
     </div>
