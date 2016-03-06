@@ -65,9 +65,17 @@
 
                 <h3>{{catName}}</h3>
 
-                <div class="food-card" ng-repeat="item in items | filter:{category: cat}">
+                <div class="food-card" ng-repeat="item in items | filter:{category: cat}" ng-click="add(item)">
+                    <div class="photo" ng-style="{'background-image':'url('+item.image+')'}"></div>
 
-                    {{item.name}}
+                    <div class="info">
+                        <p class="name">{{item.name}}</p>
+                        <p class="ingredients">{{item.ingredients}}</p>
+                        <p class="weight">{{item.weight}}</p>
+                        <p class="price">{{item.price}} ₽</p>
+                    </div>
+
+                    <div class="add-button">добавить</div>
 
                 </div>
 

@@ -44,6 +44,10 @@ app.controller('MainController', function($scope, $http){
 
     };
 
+    $scope.add = function(item){
+
+    };
+
 
 
 
