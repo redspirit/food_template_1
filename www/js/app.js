@@ -11,17 +11,32 @@ app.controller('MainController', function($scope, $http){
 
     /* make days grid */
     moment.locale('ru');
-    $scope.timeGrid = [];
+    $scope.days = [];
     for(var i = 0; i < 7; i++) {
         var d = moment().add(i, 'days');
-        $scope.timeGrid.push({
-            day: d.format('DD'),
+        $scope.days.push({
+            day: d.format('D'),
             month: d.format('MMMM'),
-            today: i == 0
+            selected: i == 0,
+            title: 'Нет заказа',
+            items: []
         });
     }
 
+    $scope.calcCost = function(day){
+        var cost = 0;
+        _.each(day.items, function(item){
+            cost += item.price;
+        });
+        return cost;
+    };
 
+    $scope.selectDay = function(day){
+        _.each($scope.days, function(d){
+            d.selected = false;
+        });
+        day.selected = true;
+    }
 
 
 

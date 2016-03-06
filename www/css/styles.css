@@ -1,5 +1,5 @@
 @font-face{
-    font-family: 'wf_SegoeUILight';
+    font-family: 'wf_SegoeUI';
     src:url('../fonts/segoe.eot');
     src:url('../fonts/segoe.eot?#iefix') format('embedded-opentype'),
     url('../fonts/segoe.woff') format('woff'),
@@ -10,9 +10,13 @@
 }
 
 body {
-    font-family: wf_SegoeUILight, Arial;
+    font-family: wf_SegoeUI, Arial;
     background-color: #f2f2f2;
     font-size: 18px;
+}
+
+.center{
+    text-align: center;
 }
 
 .main-wrap{
@@ -26,9 +30,10 @@ body {
 .left-bar{
     width: 260px;
     float: left;
-    background-color: #0185b7;
-    color: white;
+    background-color: #0189bd;
+    color: #f2f2f2;
     padding: 10px;
+    padding-left: 0;
     box-sizing: border-box;
 }
 .right-bar{
@@ -36,4 +41,110 @@ body {
     background-color: white;
     padding: 15px;
     box-sizing: border-box;
+}
+.one-day{
+    overflow: hidden;
+    height: 40px;
+    margin: 11px 0;
+    cursor: pointer;
+}
+.day-date{
+    float: left;
+    width: 60px;
+    height: 50px;
+    overflow: hidden;
+    text-align: center;
+    border-right: 1px solid #cccccc;
+}
+.day-date p{
+    font-size: 20px;
+    font-weight: bold;
+}
+.day-date span{
+    font-size: 13px;
+}
+
+.day-title{
+    float: left;
+    width: 140px;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.day-cost{
+    text-align: right;
+    font-size: 15px;
+    margin: 10px 4px;
+}
+.order-history{
+    text-align: center;
+    padding: 10px;
+}
+.order-history a{
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+.one-day.expand{
+    background-color: #fff;
+    color: #333;
+    border-left: 6px solid #0189BD;
+    padding: 10px 10px 10px 0;
+    position: relative;
+    margin-left: -6px;
+    width: 250px;
+    height: auto;
+}
+.one-day.expand .day-date{
+    border-right: 1px solid #3a3d98;
+    height: 44px;
+}
+.one-day.expand .day-delivery{
+    margin-left: 70px;
+    width: 190px;
+    margin-bottom: 15px;
+}
+.one-day.expand .day-delivery p{
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+.one-day.expand .day-delivery span{
+    font-size: 16px;
+}
+.one-day.expand .food-items{
+    clear: left;
+}
+
+.food-item{
+    font-size: 15px;
+    overflow: hidden;
+    padding: 5px 10px;
+}
+.food-item .title{
+    float: left;
+    font-size: 16px;
+}
+.food-item .price{
+    float: right;
+    text-align: right;
+}
+.food-item .total{
+    float: left;
+    margin-left: 110px;
+}
+
+
+.super-button{
+    margin-top: 10px;
+    display: inline-block;
+    border: 2px solid #1a1a1a;
+    color: #1a1a1a;
+    padding: 2px 40px 3px;
+    font-size: 16px;
+    /*font-weight: bold;*/
+    cursor: pointer;
+}
+.super-button:hover{
+    background-color: #1a1a1a;
+    color: #f2f2f2;
 }

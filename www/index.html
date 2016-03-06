@@ -14,10 +14,49 @@
 
         <div class="left-bar">
 
-            <div ng-repeat="day in timeGrid">
+            <div ng-repeat="day in days" class="one-day" ng-class="{expand: day.selected}" ng-click="selectDay(day)">
 
-                {{day.day}} {{day.month}}
+                <div class="day-date">
+                    <p>{{day.day}}</p>
+                    <span>{{day.month}}</span>
+                </div>
 
+                <div class="day-title" ng-hide="day.selected">
+                    {{day.title}}
+                </div>
+                <div class="day-cost" ng-hide="day.selected">
+                    {{calcCost(day)}} ₽
+                </div>
+
+                <div class="day-delivery" ng-show="day.selected">
+                    <p>Адрес доставки</p>
+                    <span>Радищева 28 в 25 каб.</span>
+                </div>
+                <div class="food-items" ng-show="day.selected">
+
+                    <div class="food-item">
+                        <div class="title">Некий товар 1</div>
+                        <div class="price">100 ₽</div>
+                    </div>
+                    <div class="food-item">
+                        <div class="title">Некий товар 2</div>
+                        <div class="price">200 ₽</div>
+                    </div>
+
+
+                    <div class="food-item">
+                        <div class="total">Итого:</div>
+                        <div class="price">300 ₽</div>
+                    </div>
+                    <div class="center">
+                        <div class="super-button">супер кнопка</div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="order-history">
+                <a href="">История заказов</a>
             </div>
 
         </div>
