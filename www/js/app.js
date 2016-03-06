@@ -2,6 +2,18 @@ var app = angular.module('Template', []);
 
 app.controller('MainController', function($scope, $http){
 
+    $scope.types = [
+        {
+            id: 1,
+            name: 'Обычное меню'
+        },
+        {
+            id: 2,
+            name: 'комбо-обеды'
+        }
+    ];
+    $scope.currentType = $scope.types[0];
+
     /* load data */
     $scope.items = [];
     $scope.categories = {};
@@ -19,11 +31,11 @@ app.controller('MainController', function($scope, $http){
         $scope.days.push({
             day: d.format('D'),
             month: d.format('MMMM'),
-            selected: i == 0,
             title: 'Нет заказа',
             items: []
         });
     }
+    $scope.active = $scope.days[0];
 
     $scope.calcCost = function(day){
         var cost = 0;
@@ -34,10 +46,7 @@ app.controller('MainController', function($scope, $http){
     };
 
     $scope.selectDay = function(day){
-        _.each($scope.days, function(d){
-            d.selected = false;
-        });
-        day.selected = true;
+        $scope.active = day;
     };
 
     $scope.superClick = function(day){
@@ -45,10 +54,12 @@ app.controller('MainController', function($scope, $http){
     };
 
     $scope.add = function(item){
-
+        $scope.active.items.push(angular.copy(item));
     };
 
-
+    $scope.selectType = function(type){
+        $scope.currentType = type;
+    };
 
 
 });

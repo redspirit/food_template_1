@@ -14,25 +14,25 @@
 
         <div class="left-bar">
 
-            <div ng-repeat="day in days" class="one-day" ng-class="{expand: day.selected}" ng-click="selectDay(day)">
+            <div ng-repeat="day in days" class="one-day" ng-class="{expand: day == active}" ng-click="selectDay(day)">
 
                 <div class="day-date">
                     <p>{{day.day}}</p>
                     <span>{{day.month}}</span>
                 </div>
 
-                <div class="day-title" ng-hide="day.selected">
+                <div class="day-title" ng-hide="day == active">
                     {{day.title}}
                 </div>
-                <div class="day-cost" ng-hide="day.selected">
+                <div class="day-cost" ng-hide="day == active">
                     {{calcCost(day)}} ₽
                 </div>
 
-                <div class="day-delivery" ng-show="day.selected">
+                <div class="day-delivery" ng-show="day == active">
                     <p>Адрес доставки</p>
                     <span>Радищева 28 в 25 каб.</span>
                 </div>
-                <div class="food-items" ng-show="day.selected">
+                <div class="food-items" ng-show="day == active">
 
                     <div class="food-item" ng-repeat="item in day.items">
                         <div class="title">{{item.name}}</div>
@@ -58,7 +58,9 @@
         <div class="right-bar">
 
             <div class="type-selector">
-                Обычное меню / комбо-обеды
+                <div class="type-item" ng-class="{selected: currentType.id == tp.id, 'right-4': $first}" ng-repeat="tp in types" ng-click="selectType(tp)">
+                    {{tp.name}}
+                </div>
             </div>
 
             <div class="categories" ng-repeat="(cat, catName) in categories">

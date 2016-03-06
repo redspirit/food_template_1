@@ -124,6 +124,7 @@ body {
 .food-item .title{
     float: left;
     font-size: 16px;
+    width: 190px;
 }
 .food-item .price{
     float: right;
@@ -153,10 +154,24 @@ body {
 .type-selector{
     text-align: center;
 }
-.type-selector .selected{
-
+.type-selector .type-item{
+    cursor: pointer;
+    font-size: 14px;
+    display: inline;
+    border: 1px solid #0189BD;
+    border-radius: 4px;
+    padding: 1px 20px;
+    vertical-align: middle;
 }
-
+.type-selector .selected{
+    background-color: #0189BD;
+    color: #F2F2F2;
+    font-size: 17px;
+    padding: 3px 15px;
+}
+.type-selector .right-4{
+    margin-right: -4px;
+}
 
 .categories{
 
