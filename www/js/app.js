@@ -21,23 +21,13 @@ app.controller('MainController', function($scope, $http){
     $http.get("data/items.json").then(function(res){
         $scope.items = res.data.items;
         $scope.categories = res.data.categories;
-
-
         _.each(res.data.combo, function(combo){
-
             var line = _.map(combo, function(id){
                 return _.findWhere($scope.items, {id: id});
             });
             $scope.combo.push(line);
-
         });
-
-
-
-
-        console.log("items combo", $scope.combo);
     });
-
 
 
     /* make days grid */
