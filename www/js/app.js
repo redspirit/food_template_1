@@ -4,8 +4,10 @@ app.controller('MainController', function($scope, $http){
 
     /* load data */
     $scope.items = [];
+    $scope.categories = {};
     $http.get("data/items.json").then(function(res){
         $scope.items = res.data.items;
+        $scope.categories = res.data.categories;
         console.log("items data", $scope.items);
     });
 
@@ -36,7 +38,12 @@ app.controller('MainController', function($scope, $http){
             d.selected = false;
         });
         day.selected = true;
-    }
+    };
+
+    $scope.superClick = function(day){
+
+    };
+
 
 
 

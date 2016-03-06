@@ -34,19 +34,14 @@
                 </div>
                 <div class="food-items" ng-show="day.selected">
 
-                    <div class="food-item">
-                        <div class="title">Некий товар 1</div>
-                        <div class="price">100 ₽</div>
+                    <div class="food-item" ng-repeat="item in day.items">
+                        <div class="title">{{item.name}}</div>
+                        <div class="price">{{item.price}} ₽</div>
                     </div>
-                    <div class="food-item">
-                        <div class="title">Некий товар 2</div>
-                        <div class="price">200 ₽</div>
-                    </div>
-
 
                     <div class="food-item">
                         <div class="total">Итого:</div>
-                        <div class="price">300 ₽</div>
+                        <div class="price">{{calcCost(day)}} ₽</div>
                     </div>
                     <div class="center">
                         <div class="super-button">супер кнопка</div>
@@ -56,7 +51,7 @@
 
             </div>
             <div class="order-history">
-                <a href="">История заказов</a>
+                <a href="" ng-click="superClick(day)">История заказов</a>
             </div>
 
         </div>
