@@ -6,7 +6,7 @@
     "image": "images/salad.png",
     "ingredients": "капуска пекинская, морковь, курица, перец болг., томаты, горошек, маслины",
     "price": 40,
-    "weight" : "100 гр"
+    "weight" : 100
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "image": "images/salad.png",
     "ingredients": "",
     "price": 35,
-    "weight" : "100 гр"
+    "weight" : 100
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "image": "images/salad.png",
     "ingredients": "сельдь, свекла, картофель, морковь, лук, майонез",
     "price": 35,
-    "weight" : "100 гр"
+    "weight" : 100
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "image": "images/salad.png",
     "ingredients": "говядина, перец болг., кабачки, морковь, лук, картофель, фасоль, чеснок",
     "price": 50,
-    "weight" : "250 гр"
+    "weight" : 250
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "image": "images/salad.png",
     "ingredients": "шампиньоны, лук, картофель, молоко, сухари",
     "price": 50,
-    "weight" : "250 гр"
+    "weight" : 250
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "image": "images/salad.png",
     "ingredients": "горбуша, морковь, лук, перец, картофель, зелень",
     "price": 45,
-    "weight" : "250 гр"
+    "weight" : 250
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "image": "images/salad.png",
     "ingredients": "горбуша, лук, соус Бешамель",
     "price": 65,
-    "weight" : "120 гр"
+    "weight" : 120
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "image": "images/salad.png",
     "ingredients": "картофель, лук, шампиньоны, панировка",
     "price": 40,
-    "weight" : "100 гр"
+    "weight" : 100
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "image": "images/salad.png",
     "ingredients": "курица, томаты, морковь, лук",
     "price": 75,
-    "weight" : "120 гр"
+    "weight" : 120
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "image": "images/salad.png",
     "ingredients": "капуста, лук, морковь",
     "price": 20,
-    "weight" : "130 гр"
+    "weight" : 130
   },
   {
     "id": 11,
@@ -96,7 +96,7 @@
     "image": "images/salad.png",
     "ingredients": "",
     "price": 20,
-    "weight" : "130 гр"
+    "weight" : 130
   },
   {
     "id": 12,
@@ -105,7 +105,7 @@
     "image": "images/salad.png",
     "ingredients": "рис, морковь, горошек",
     "price": 20,
-    "weight" : "130 гр"
+    "weight" : 130
   },
   {
     "id": 13,
@@ -114,7 +114,7 @@
     "image": "images/salad.png",
     "ingredients": "говядина, капуста, картофель, сладкий перец, морковь, лук",
     "price": 70,
-    "weight" : "250 гр"
+    "weight" : 250
   },
   {
     "id": 14,
@@ -123,7 +123,7 @@
     "image": "images/salad.png",
     "ingredients": "Сельдь под шубой; Суп-крем грибной; Поджарка из курицы; Рис с овощами",
     "price": 155,
-    "weight" : "750 гр"
+    "weight" : 750
   },
   {
     "id": 15,
@@ -132,7 +132,7 @@
     "image": "images/salad.png",
     "ingredients": "Куриная сальса; Суп Мексиканский; Жаркое из говядины",
     "price": 155,
-    "weight" : "750 гр"
+    "weight" : 750
   },
   {
     "id": 16,
@@ -141,7 +141,7 @@
     "image": "images/salad.png",
     "ingredients": "Свекла с черносливом; Уха амурская; Биточки рыбные; Картофель запеченый",
     "price": 155,
-    "weight" : "750 гр"
+    "weight" : 750
   }
 ],
   "categories": {
@@ -151,5 +151,8 @@
     "garnish": "Гарниры",
     "separate": "Самостоятельное блюдо",
     "strong": "Усиленное меню"
-  }
+  },
+  "combo": [
+    [5,6,8,10]
+  ]
 }

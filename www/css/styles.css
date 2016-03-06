@@ -232,5 +232,62 @@ body {
     display: block;
 }
 
+.combo-container h3{
+    color: #808080;
+    font-size: 34px;
+    padding: 25px 0 15px;
+    clear: left;
+}
+.combo{
+    height: 330px;
+    border: 1px solid #cccccc;
+    border-bottom: 4px solid #39b54a;
+    cursor: pointer;
+    overflow: hidden;
+    margin-right: 8px;
+}
+.combo .combo-items{
+    display: inline-block;
+    width: 200px;
+    height: 245px;
+    overflow: hidden;
+    text-align: center;
+}
+.combo .combo-items .photo{
+    height: 150px;
+    background-size: cover;
+}
+.combo .combo-items .name{
+    margin: 8px 0 14px;
+}
+.combo .combo-items .ingredients{
+    font-size: 13px;
+    margin: 0 15px 10px;
+    line-height: 15px;
+}
+.combo .weight{
+    color: gray;
+    text-align: center;
+}
+.combo .price{
+    font-size: 32px;
+    margin-top: 10px;
+    text-align: center;
+}
 
-
+.combo .add-button{
+    background-color: #39b54a;
+    color: #f2f2f2;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 4px 0 5px;
+    overflow: hidden;
+    display: none;
+    text-align: center;
+}
+.combo:hover{
+    box-shadow: 0 0 11px 0 rgba(50, 50, 50, 0.46);
+}
+.combo:hover .add-button{
+    display: block;
+}

@@ -16,12 +16,29 @@ app.controller('MainController', function($scope, $http){
 
     /* load data */
     $scope.items = [];
+    $scope.combo = [];
     $scope.categories = {};
     $http.get("data/items.json").then(function(res){
         $scope.items = res.data.items;
         $scope.categories = res.data.categories;
-        console.log("items data", $scope.items);
+
+
+        _.each(res.data.combo, function(combo){
+
+            var line = _.map(combo, function(id){
+                return _.findWhere($scope.items, {id: id});
+            });
+            $scope.combo.push(line);
+
+        });
+
+
+
+
+        console.log("items combo", $scope.combo);
     });
+
+
 
     /* make days grid */
     moment.locale('ru');
@@ -45,6 +62,21 @@ app.controller('MainController', function($scope, $http){
         return cost;
     };
 
+    $scope.comboCost = function(items){
+        var cost = 0;
+        _.each(items, function(item){
+            cost += item.price;
+        });
+        return cost;
+    };
+    $scope.comboWeight = function(items){
+        var cost = 0;
+        _.each(items, function(item){
+            cost += item.weight;
+        });
+        return cost;
+    };
+
     $scope.selectDay = function(day){
         $scope.active = day;
     };
@@ -55,6 +87,10 @@ app.controller('MainController', function($scope, $http){
 
     $scope.add = function(item){
         $scope.active.items.push(angular.copy(item));
+    };
+
+    $scope.addCombo = function(items){
+        _.each(items, $scope.add);
     };
 
     $scope.selectType = function(type){

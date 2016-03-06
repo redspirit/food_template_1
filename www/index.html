@@ -63,7 +63,7 @@
                 </div>
             </div>
 
-            <div class="categories" ng-repeat="(cat, catName) in categories">
+            <div class="categories" ng-repeat="(cat, catName) in categories" ng-if="currentType.id == 1">
 
                 <h3>{{catName}}</h3>
 
@@ -73,7 +73,7 @@
                     <div class="info">
                         <p class="name">{{item.name}}</p>
                         <p class="ingredients">{{item.ingredients}}</p>
-                        <p class="weight">{{item.weight}}</p>
+                        <p class="weight">{{item.weight}} гр.</p>
                         <p class="price">{{item.price}} ₽</p>
                     </div>
 
@@ -81,6 +81,27 @@
 
                 </div>
 
+
+            </div>
+
+            <div class="combo-container" ng-if="currentType.id == 2">
+
+                <h3>Усиленные комбо</h3>
+
+                <div class="combo" ng-repeat="items in combo" ng-click="addCombo(items)">
+
+                    <div class="combo-items" ng-repeat="item in items">
+                        <div class="photo" ng-style="{'background-image':'url('+item.image+')'}"></div>
+
+                        <div class="name">{{item.name}}</div>
+                        <div class="ingredients">{{item.ingredients}}</div>
+
+                    </div>
+
+                    <div class="weight">{{comboWeight(items)}} гр.</div>
+                    <div class="price">{{comboCost(items)}} ₽</div>
+                    <div class="add-button">добавить</div>
+                </div>
 
             </div>
 
