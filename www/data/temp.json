@@ -1,0 +1,28 @@
+{"items": [{
+    "id": 14,
+      "category": "strong",
+      "name" : "Комплекс №1",
+      "image": "images/14.png",
+      "ingredients": "Сельдь под шубой; Суп-крем грибной; Поджарка из курицы; Рис с овощами",
+      "price": 155,
+      "weight" : 750
+  },
+  {
+    "id": 15,
+    "category": "strong",
+    "name" : "Комплекс №2",
+    "image": "images/15.png",
+    "ingredients": "Куриная сальса; Суп Мексиканский; Жаркое из говядины",
+    "price": 155,
+    "weight" : 750
+  },
+  {
+    "id": 16,
+    "category": "strong",
+    "name" : "Комплекс №3",
+    "image": "images/16.png",
+    "ingredients": "Свекла с черносливом; Уха амурская; Биточки рыбные; Картофель запеченый",
+    "price": 155,
+    "weight" : 750
+  }]
+}

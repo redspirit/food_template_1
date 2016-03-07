@@ -292,3 +292,123 @@ body {
 .combo:hover .add-button{
     display: block;
 }
+
+
+/* ------------ */
+
+.breadcrumb{
+    margin-top: 35px;
+    margin-left: 6px;
+    border: 2px solid #cccbcb;
+    border-radius: 25px;
+    height: 45px;
+    width: 770px;
+    overflow: hidden;
+}
+
+.breadcrumb-path {
+    list-style: none;
+    overflow: hidden;
+    margin: auto;
+    display: inline-block;
+    padding: 0;
+    font-size: 14px;
+}
+.breadcrumb-path li {
+    float: left;
+}
+.breadcrumb-path li span {
+    color: #1a1a1a;
+    text-decoration: none;
+    padding: 16px 0 16px 20px;
+    text-align: center;
+    width: 177px;
+    position: relative;
+    display: block;
+    float: left;
+}
+.breadcrumb-path li span:after {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid #a5630d;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    left: 100%;
+    z-index: 2; }
+
+.breadcrumb-path li span:before {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid #cccbcb;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: 1px;
+    left: 100%;
+    z-index: 1;
+}
+
+.breadcrumb-path li:first-child span {
+    padding-left: 0;
+}
+.breadcrumb-path li:last-child span {
+    width: 376px
+}
+.breadcrumb-path li span {
+    background: #fff;
+}
+.breadcrumb-path li span:after {
+    border-left-color: #fff;
+}
+
+.breadcrumb-path .active span {
+    background: #e5e5e4;
+}
+.breadcrumb-path .active span:after {
+    border-left-color: #e5e5e4;
+}
+
+.breadcrumb-path .complete span {
+    background: #459944;
+    color: #f2f2f2;
+}
+.breadcrumb-path .complete span:after {
+    border-left-color: #459944;
+}
+.breadcrumb-path li.splited {
+    width: 396px;
+}
+.breadcrumb-path .sub-crumb {
+    height: 22px;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 13px;
+}
+.breadcrumb-path .sub-crumb:first-child {
+    border-bottom: 1px solid #cccbcb;
+    padding: 0;
+}
+.breadcrumb-path .sub-crumb.active {
+    background: #e5e5e4;
+}
+.breadcrumb-path .sub-crumb.complete {
+    background: #459944;
+    color: #f2f2f2;
+}
+
+.breadcrumb-path .sub-path li span{
+    padding: 4px 0 4px 20px;
+    width: 178px;
+}
+.pointer{
+    cursor: pointer;
+}

@@ -86,6 +86,32 @@
 
             <div class="combo-container" ng-if="currentType.id == 2">
 
+
+                <div class="breadcrumb">
+
+                    <ul class="breadcrumb-path">
+                        <li ng-class="navClass(1)" ng-click="navSelect(1)"><span>Рассольник</span></li>
+                        <li ng-class="navClass(2)" ng-click="navSelect(2)"><span>Суп / салат</span></li>
+                        <li class="splited">
+                            <div class="sub-crumb">
+                                <ul class="breadcrumb-path sub-path">
+                                    <li ng-class="navClass(4)" ng-click="navSelect(4)"><span>Второе блюдо</span></li>
+                                    <li ng-class="navClass(5)" ng-click="navSelect(5)"><span>Гарнир</span></li>
+                                </ul>
+                            </div>
+                            <div class="sub-crumb" ng-class="navClass(3)" ng-click="navSelect(3)">
+                                Блюдо дня
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+
+
+
+
                 <h3>Усиленные комбо</h3>
 
                 <div class="combo" ng-repeat="items in combo" ng-click="addCombo(items)">

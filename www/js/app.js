@@ -2,6 +2,15 @@ var app = angular.module('Template', []);
 
 app.controller('MainController', function($scope, $http){
 
+    $scope.currentNav = 1;
+    var navMap = {
+        1: [],
+        2: [1],
+        3: [1,2],
+        4: [1,2],
+        5: [1,2,4]
+    };
+
     $scope.types = [
         {
             id: 1,
@@ -85,6 +94,18 @@ app.controller('MainController', function($scope, $http){
 
     $scope.selectType = function(type){
         $scope.currentType = type;
+    };
+
+    $scope.navSelect = function(num){
+        $scope.currentNav = num;
+    };
+
+    $scope.navClass = function(num){
+        return {
+            pointer: true,
+            active: $scope.currentNav == num,
+            complete: navMap[$scope.currentNav].indexOf(num) > -1
+        }
     };
 
 
