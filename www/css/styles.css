@@ -95,6 +95,7 @@ body {
     margin-left: -6px;
     width: 250px;
     height: auto;
+    box-shadow: 0 0 11px 0 rgba(50, 50, 50, 0.46);
 }
 .one-day.expand .day-date{
     border-right: 1px solid #3a3d98;
