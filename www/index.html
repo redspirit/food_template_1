@@ -41,12 +41,15 @@
                         <div class="price">{{item.price}} ₽</div>
                     </div>
 
-                    <div class="food-item">
+                    <div class="food-item" ng-show="calcCost(day)">
                         <div class="total">Итого:</div>
                         <div class="price">{{calcCost(day)}} ₽</div>
                     </div>
                     <div class="center">
-                        <div class="super-button">супер кнопка</div>
+
+                        <div class="order-button" ng-show="orderButtonShow(1, day)" ng-click="order(day)">Заказать</div>
+                        <div class="order-button" ng-show="orderButtonShow(2, day)" ng-click="orderEnd(day)">Заказ оформлен <i class="fa fa-check-circle-o"></i></div>
+
                     </div>
 
                 </div>

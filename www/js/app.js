@@ -12,14 +12,8 @@ app.controller('MainController', function($scope, $http){
     };
 
     $scope.types = [
-        {
-            id: 1,
-            name: 'Обычное меню'
-        },
-        {
-            id: 2,
-            name: 'комбо-обеды'
-        }
+        {id: 1, name: 'Обычное меню'},
+        {id: 2, name: 'комбо-обеды'}
     ];
     $scope.currentType = $scope.types[0];
 
@@ -48,6 +42,7 @@ app.controller('MainController', function($scope, $http){
             day: d.format('D'),
             month: d.format('MMMM'),
             title: 'Нет заказа',
+            savedPrice: 0,
             items: []
         });
     }
@@ -112,6 +107,27 @@ app.controller('MainController', function($scope, $http){
         list.splice(index, 1);
     };
 
+    $scope.orderButtonShow = function(type, day){
+
+        var cost = $scope.calcCost(day);
+        if(!cost)
+            return false;
+
+        if(type == 1) {
+            return (day.savedPrice != cost || day.savedPrice == 0);
+        } else {
+            return !(day.savedPrice != cost || day.savedPrice == 0);
+        }
+
+    };
+
+    $scope.order = function(day){
+        day.savedPrice = $scope.calcCost(day);
+    };    
+
+    $scope.orderEnd = function(day){
+        alert('Вы сделали заказ');
+    }
 
 
 
