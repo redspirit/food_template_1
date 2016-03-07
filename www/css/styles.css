@@ -420,3 +420,20 @@ body {
 .pointer{
     cursor: pointer;
 }
+
+.center-block{
+    text-align: center;
+    margin-top: -2px;
+}
+.nav-price{
+    border: 3px solid #cccbcb;
+    border-top: none;
+    border-radius: 4px;
+    width: 195px;
+    height: 37px;
+    text-align: center;
+    display: inline-block;
+    font-size: 24px;
+    padding-top: 4px;
+    box-sizing: border-box;
+}
