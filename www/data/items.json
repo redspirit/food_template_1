@@ -3,7 +3,7 @@
     "id": 1,
     "category": "salad",
     "name" : "Куриная сальса",
-    "image": "images/salad.png",
+    "image": "images/1.png",
     "ingredients": "капуска пекинская, морковь, курица, перец болг., томаты, горошек, маслины",
     "price": 40,
     "weight" : 100
@@ -12,7 +12,7 @@
     "id": 2,
     "category": "salad",
     "name" : "Свекла с черносливом и грецким орехом",
-    "image": "images/salad.png",
+    "image": "images/2.png",
     "ingredients": "",
     "price": 35,
     "weight" : 100
@@ -21,7 +21,7 @@
     "id": 3,
     "category": "salad",
     "name" : "Сельдь под шубой",
-    "image": "images/salad.png",
+    "image": "images/3.png",
     "ingredients": "сельдь, свекла, картофель, морковь, лук, майонез",
     "price": 35,
     "weight" : 100
@@ -30,7 +30,7 @@
     "id": 4,
     "category": "soup",
     "name" : "Суп Мексиканский",
-    "image": "images/salad.png",
+    "image": "images/4.png",
     "ingredients": "говядина, перец болг., кабачки, морковь, лук, картофель, фасоль, чеснок",
     "price": 50,
     "weight" : 250
@@ -39,7 +39,7 @@
     "id": 5,
     "category": "soup",
     "name" : "Суп-крем грибной",
-    "image": "images/salad.png",
+    "image": "images/5.png",
     "ingredients": "шампиньоны, лук, картофель, молоко, сухари",
     "price": 50,
     "weight" : 250
@@ -48,7 +48,7 @@
     "id": 6,
     "category": "soup",
     "name" : "Уха амурская",
-    "image": "images/salad.png",
+    "image": "images/6.png",
     "ingredients": "горбуша, морковь, лук, перец, картофель, зелень",
     "price": 45,
     "weight" : 250
@@ -57,7 +57,7 @@
     "id": 7,
     "category": "second",
     "name" : "Биточки рыбные в белом соусе",
-    "image": "images/salad.png",
+    "image": "images/7.png",
     "ingredients": "горбуша, лук, соус Бешамель",
     "price": 65,
     "weight" : 120
@@ -66,7 +66,7 @@
     "id": 8,
     "category": "second",
     "name" : "Зразы картофельные с грибами",
-    "image": "images/salad.png",
+    "image": "images/8.png",
     "ingredients": "картофель, лук, шампиньоны, панировка",
     "price": 40,
     "weight" : 100
@@ -75,7 +75,7 @@
     "id": 9,
     "category": "second",
     "name" : "Поджарка из курицы",
-    "image": "images/salad.png",
+    "image": "images/9.png",
     "ingredients": "курица, томаты, морковь, лук",
     "price": 75,
     "weight" : 120
@@ -84,7 +84,7 @@
     "id": 10,
     "category": "garnish",
     "name" : "Капуста тушеная",
-    "image": "images/salad.png",
+    "image": "images/10.png",
     "ingredients": "капуста, лук, морковь",
     "price": 20,
     "weight" : 130
@@ -93,7 +93,7 @@
     "id": 11,
     "category": "garnish",
     "name" : "Картофель запеченый с болгарским перцем",
-    "image": "images/salad.png",
+    "image": "images/11.png",
     "ingredients": "",
     "price": 20,
     "weight" : 130
@@ -102,7 +102,7 @@
     "id": 12,
     "category": "garnish",
     "name" : "Рис с овощами",
-    "image": "images/salad.png",
+    "image": "images/12.png",
     "ingredients": "рис, морковь, горошек",
     "price": 20,
     "weight" : 130
@@ -111,7 +111,7 @@
     "id": 13,
     "category": "separate",
     "name" : "Жаркое из говядины",
-    "image": "images/salad.png",
+    "image": "images/13.png",
     "ingredients": "говядина, капуста, картофель, сладкий перец, морковь, лук",
     "price": 70,
     "weight" : 250
@@ -120,7 +120,7 @@
     "id": 14,
     "category": "strong",
     "name" : "Комплекс №1",
-    "image": "images/salad.png",
+    "image": "images/14.png",
     "ingredients": "Сельдь под шубой; Суп-крем грибной; Поджарка из курицы; Рис с овощами",
     "price": 155,
     "weight" : 750
@@ -129,7 +129,7 @@
     "id": 15,
     "category": "strong",
     "name" : "Комплекс №2",
-    "image": "images/salad.png",
+    "image": "images/15.png",
     "ingredients": "Куриная сальса; Суп Мексиканский; Жаркое из говядины",
     "price": 155,
     "weight" : 750
@@ -138,7 +138,7 @@
     "id": 16,
     "category": "strong",
     "name" : "Комплекс №3",
-    "image": "images/salad.png",
+    "image": "images/16.png",
     "ingredients": "Свекла с черносливом; Уха амурская; Биточки рыбные; Картофель запеченый",
     "price": 155,
     "weight" : 750
