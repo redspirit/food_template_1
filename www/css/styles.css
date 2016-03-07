@@ -122,14 +122,22 @@ body {
     overflow: hidden;
     padding: 5px 10px;
 }
+.food-item:hover{
+    background-color: #e5e5e4;
+}
 .food-item .title{
     float: left;
     font-size: 16px;
-    width: 190px;
+    width: 180px;
 }
 .food-item .price{
     float: right;
     text-align: right;
+}
+.food-item a.remove-item{
+    color: red;
+    float: right;
+    margin-left: 5px;
 }
 .food-item .total{
     float: left;

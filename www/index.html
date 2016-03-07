@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Food template 1</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
 
@@ -36,6 +37,7 @@
 
                     <div class="food-item" ng-repeat="item in day.items">
                         <div class="title">{{item.name}}</div>
+                        <a href="" class="remove-item" ng-click="removeItem(day.items, $index)"><i class="fa fa-times"></i></a>
                         <div class="price">{{item.price}} ₽</div>
                     </div>
 

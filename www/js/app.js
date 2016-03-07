@@ -108,5 +108,11 @@ app.controller('MainController', function($scope, $http){
         }
     };
 
+    $scope.removeItem = function(list, index){
+        list.splice(index, 1);
+    };
+
+
+
 
 });
