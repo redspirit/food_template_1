@@ -2,7 +2,6 @@ var app = angular.module('Template', []);
 
 app.controller('MainController', function($scope, $http){
 
-    $scope.currentNav = 1;
     var navMap = {
         1: [],
         2: [1],
@@ -39,18 +38,24 @@ app.controller('MainController', function($scope, $http){
 
     /* load data */
     $scope.items = [];
-    $scope.combo = [];
+    $scope.presetCombo = [];
     $scope.categories = {};
     $scope.prepareCategories = [];
     $http.get("data/items.json").then(function(res){
         $scope.items = res.data.items;
         $scope.categories = res.data.categories;
-        //_.each(res.data.combo, function(combo){
-        //    var line = _.map(combo, function(id){
-        //        return _.findWhere($scope.items, {id: id});
-        //    });
-        //    $scope.combo.push(line);
-        //});
+
+        _.each(res.data.presetCombo, function(combo){
+            var line = _.map(combo.items, function(id){
+                return _.findWhere($scope.items, {id: id});
+            });
+            $scope.presetCombo.push({
+                title: combo.title,
+                items: line
+            });
+        });
+
+        console.log("$scope.presetCombo", $scope.presetCombo);
 
         _.each($scope.navMap, function(rule, step){
             _.each(rule, function(ruleItem){
@@ -81,7 +86,8 @@ app.controller('MainController', function($scope, $http){
             items: [],
             comboStack: {},
             comboList: [],
-            comboTotal: 0
+            comboTotal: 0,
+            currentNav: 1
         });
     }
     $scope.active = $scope.days[0];
@@ -112,14 +118,14 @@ app.controller('MainController', function($scope, $http){
 
     $scope.navSelect = function(num){
         if($scope.active.comboStack[num])
-            $scope.currentNav = num;
+            $scope.active.currentNav = num;
     };
 
     $scope.navClass = function(num){
         var css = {
             pointer: true,
-            active: $scope.currentNav == num,
-            complete: navMap[$scope.currentNav].indexOf(num) > -1
+            active: $scope.active.currentNav == num,
+            complete: navMap[$scope.active.currentNav].indexOf(num) > -1
         };
         css.pointer = css.active || css.complete;
         return css;
@@ -153,10 +159,11 @@ app.controller('MainController', function($scope, $http){
 
     $scope.comboNext = function(item, cat){
 
-        //console.log("item", item);
-        console.log("cat", cat);
-
         $scope.active.comboStack[cat.showIn] = item;
+
+        console.log("$scope.active.comboStack", $scope.active.comboStack);
+
+
         if(cat.showIn == 4)
             delete $scope.active.comboStack[3];
         if(cat.showIn == 3) {
@@ -164,7 +171,7 @@ app.controller('MainController', function($scope, $http){
             delete $scope.active.comboStack[5];
         }
 
-        $scope.currentNav = cat.next;
+        $scope.active.currentNav = cat.next;
 
         if(cat.final)
             console.log('Final');
@@ -193,12 +200,50 @@ app.controller('MainController', function($scope, $http){
             $scope.active.comboList.push(val);
         });
         $scope.active.comboTotal = $scope.comboTotal(stack);
+        $scope.active.comboTitle = '';
     };
     $scope.comboClear = function(day){
         day.comboList = [];
         day.comboStack = {};
         day.comboTotal = 0;
-        $scope.currentNav = 1;
+        $scope.active.currentNav = 1;
     };
+    $scope.namePlaceholder = function(num, text){
+        return $scope.active.comboStack[num] ? $scope.splice($scope.active.comboStack[num].name) : text;
+    };
+    $scope.splice = function(text){
+        var sliced = text.slice(0,20);
+        if (sliced.length < text.length) {
+            sliced += '...';
+        }
+        return sliced;
+    };
+
+
+    $scope.addComboList = function(combo){
+        _.each(combo.items, function(val){
+            $scope.active.comboList.push(val);
+        });
+        $scope.active.comboTotal = $scope.comboTotalList(combo.items);
+        $scope.active.comboTitle = combo.title;
+    };
+    $scope.comboWeightList = function(list){
+        var w = 0;
+        var c = 0;
+        _.each(list, function(val){
+            w += val.weight;
+            c += val.calories;
+        });
+        return w + " гр. / " + c + " ккал.";
+    };
+    $scope.comboTotalList = function(list){
+        var total = 0;
+        _.each(list, function(val){
+            total += val.price;
+        });
+        return total;
+    };
+
+
 
 });

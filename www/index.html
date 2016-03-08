@@ -36,7 +36,7 @@
                 <div class="food-items" ng-show="day == active">
 
                     <div class="food-item" ng-show="day.comboTotal">
-                        <div class="title">Комбо-обед</div>
+                        <div class="title">{{day.comboTitle ? day.comboTitle : 'Комбо-обед'}}</div>
                         <a href="" class="remove-item" ng-click="comboClear(day)"><i class="fa fa-times"></i></a>
                         <div class="price">{{day.comboTotal}} ₽</div>
                     </div>
@@ -92,24 +92,49 @@
 
                 </div>
 
+            </div>
+
+            <div class="categories" ng-repeat="comboList in presetCombo" ng-if="currentType.id == 1">
+
+                <h3>{{comboList.title}}</h3>
+
+                <div class="combo" ng-click="addComboList(comboList)">
+
+                    <div class="combo-items" ng-repeat="item in comboList.items">
+                        <div class="photo" ng-style="{'background-image':'url('+item.image+')'}"></div>
+
+                        <div class="name">{{item.name}}</div>
+                        <div class="ingredients">{{item.ingredients}}</div>
+
+                    </div>
+
+                    <div class="weight">{{comboWeightList(comboList.items)}}</div>
+                    <div class="price">{{comboTotalList(comboList.items)}} ₽</div>
+                    <div class="add-button">добавить</div>
+
+                </div>
 
             </div>
+
+
+
+
 
             <div class="combo-container" ng-if="currentType.id == 2">
 
                 <div class="breadcrumb">
                     <ul class="breadcrumb-path">
-                        <li ng-class="navClass(1)" ng-click="navSelect(1)"><span>{{comboStack[1] ? comboStack[1].name : 'Суп / салат'}}</span></li>
-                        <li ng-class="navClass(2)" ng-click="navSelect(2)"><span>{{comboStack[2] ? comboStack[2].name : 'Суп / салат'}}</span></li>
+                        <li ng-class="navClass(1)" ng-click="navSelect(1)"><span>{{namePlaceholder(1, 'Суп / салат')}}</span></li>
+                        <li ng-class="navClass(2)" ng-click="navSelect(2)"><span>{{namePlaceholder(2, 'Суп / салат')}}</span></li>
                         <li class="splited">
                             <div class="sub-crumb">
                                 <ul class="breadcrumb-path sub-path">
-                                    <li ng-class="navClass(4)" ng-click="navSelect(4)"><span>{{comboStack[4] ? comboStack[4].name : 'Второе блюдо'}}</span></li>
-                                    <li ng-class="navClass(5)" ng-click="navSelect(5)"><span>{{comboStack[5] ? comboStack[5].name : 'Гарнир'}}</span></li>
+                                    <li ng-class="navClass(4)" ng-click="navSelect(4)"><span>{{namePlaceholder(4, 'Второе блюдо')}}</span></li>
+                                    <li ng-class="navClass(5)" ng-click="navSelect(5)"><span>{{namePlaceholder(5, 'Гарнир')}}</span></li>
                                 </ul>
                             </div>
                             <div class="sub-crumb" ng-class="navClass(3)" ng-click="navSelect(3)">
-                                {{comboStack[3] ? comboStack[3].name : 'Блюдо дня'}}
+                                {{namePlaceholder(3, 'Блюдо дня')}}
                             </div>
                         </li>
                     </ul>
@@ -123,7 +148,7 @@
 
 
 
-                <div class="categories" ng-repeat="cat in prepareCategories | filter:{step: currentNav}">
+                <div class="categories" ng-repeat="cat in prepareCategories | filter:{step: active.currentNav}">
 
                     <h3>{{cat.name}}</h3>
 
@@ -144,7 +169,7 @@
                 </div>
 
 
-                <div ng-show="currentNav >= 6">
+                <div ng-show="active.currentNav >= 6">
 
                     <h3>Усиленные комбо</h3>
 
