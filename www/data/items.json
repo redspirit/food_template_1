@@ -6,6 +6,7 @@
     "image": "images/1.png",
     "ingredients": "капуска пекинская, морковь, курица, перец болг., томаты, горошек, маслины",
     "price": 40,
+    "calories": 150,
     "weight" : 100
   },
   {
@@ -15,6 +16,7 @@
     "image": "images/2.png",
     "ingredients": "",
     "price": 35,
+    "calories": 150,
     "weight" : 100
   },
   {
@@ -24,6 +26,7 @@
     "image": "images/3.png",
     "ingredients": "сельдь, свекла, картофель, морковь, лук, майонез",
     "price": 35,
+    "calories": 150,
     "weight" : 100
   },
   {
@@ -33,6 +36,7 @@
     "image": "images/4.png",
     "ingredients": "говядина, перец болг., кабачки, морковь, лук, картофель, фасоль, чеснок",
     "price": 50,
+    "calories": 190,
     "weight" : 250
   },
   {
@@ -42,6 +46,7 @@
     "image": "images/5.png",
     "ingredients": "шампиньоны, лук, картофель, молоко, сухари",
     "price": 50,
+    "calories": 200,
     "weight" : 250
   },
   {
@@ -51,6 +56,7 @@
     "image": "images/6.png",
     "ingredients": "горбуша, морковь, лук, перец, картофель, зелень",
     "price": 45,
+    "calories": 190,
     "weight" : 250
   },
   {
@@ -60,6 +66,7 @@
     "image": "images/7.png",
     "ingredients": "горбуша, лук, соус Бешамель",
     "price": 65,
+    "calories": 130,
     "weight" : 120
   },
   {
@@ -69,6 +76,7 @@
     "image": "images/8.png",
     "ingredients": "картофель, лук, шампиньоны, панировка",
     "price": 40,
+    "calories": 150,
     "weight" : 100
   },
   {
@@ -78,6 +86,7 @@
     "image": "images/9.png",
     "ingredients": "курица, томаты, морковь, лук",
     "price": 75,
+    "calories": 140,
     "weight" : 120
   },
   {
@@ -87,6 +96,7 @@
     "image": "images/10.png",
     "ingredients": "капуста, лук, морковь",
     "price": 20,
+    "calories": 150,
     "weight" : 130
   },
   {
@@ -96,6 +106,7 @@
     "image": "images/11.png",
     "ingredients": "",
     "price": 20,
+    "calories": 160,
     "weight" : 130
   },
   {
@@ -105,6 +116,7 @@
     "image": "images/12.png",
     "ingredients": "рис, морковь, горошек",
     "price": 20,
+    "calories": 150,
     "weight" : 130
   },
   {
@@ -114,6 +126,7 @@
     "image": "images/13.png",
     "ingredients": "говядина, капуста, картофель, сладкий перец, морковь, лук",
     "price": 70,
+    "calories": 210,
     "weight" : 250
   }
 ],
@@ -122,9 +135,11 @@
     "soup": "Супы",
     "second": "Вторые блюда",
     "garnish": "Гарниры",
-    "separate": "Самостоятельное блюдо"
+    "separate": "Блюдо дня"
   },
   "combo": [
+    [5,6,8,10],
+    [5,6,8,10],
     [5,6,8,10]
   ]
 }

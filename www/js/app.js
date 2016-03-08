@@ -32,8 +32,8 @@ app.controller('MainController', function($scope, $http){
     };
 
     $scope.types = [
-        {id: 1, name: 'Обычное меню'},
-        {id: 2, name: 'комбо-обеды'}
+        {id: 1, name: 'Меню'},
+        {id: 2, name: 'Собрать комбо'}
     ];
     $scope.currentType = $scope.types[0];
 
@@ -111,15 +111,18 @@ app.controller('MainController', function($scope, $http){
     };
 
     $scope.navSelect = function(num){
-        $scope.currentNav = num;
+        if($scope.active.comboStack[num])
+            $scope.currentNav = num;
     };
 
     $scope.navClass = function(num){
-        return {
+        var css = {
             pointer: true,
             active: $scope.currentNav == num,
             complete: navMap[$scope.currentNav].indexOf(num) > -1
-        }
+        };
+        css.pointer = css.active || css.complete;
+        return css;
     };
 
     $scope.removeItem = function(list, index){
@@ -176,11 +179,13 @@ app.controller('MainController', function($scope, $http){
         return total;
     };
     $scope.comboWeight = function(stack){
-        var cost = 0;
+        var w = 0;
+        var c = 0;
         _.each(stack, function(val, key){
-            cost += val.weight;
+            w += val.weight;
+            c += val.calories;
         });
-        return cost;
+        return w + " гр. / " + c + " ккал.";
     };
     $scope.addCombo = function(stack){
         $scope.active.comboList = [];
