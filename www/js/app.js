@@ -123,7 +123,7 @@ app.controller('MainController', function($scope, $http){
 
     $scope.order = function(day){
         day.savedPrice = $scope.calcCost(day);
-    };    
+    };
 
     $scope.orderEnd = function(day){
         alert('Вы сделали заказ');
