@@ -128,7 +128,7 @@ body {
 .food-item .title{
     float: left;
     font-size: 16px;
-    width: 180px;
+    width: 173px;
 }
 .food-item .price{
     float: right;
@@ -304,7 +304,7 @@ body {
     margin: auto;
     display: inline-block;
     padding: 0;
-    font-size: 14px;
+    font-size: 13px;
 }
 .breadcrumb-path li {
     float: left;
@@ -398,7 +398,7 @@ body {
 }
 
 .breadcrumb-path .sub-path li span{
-    padding: 4px 0 4px 20px;
+    padding: 4px 0 5px 20px;
     width: 178px;
 }
 .pointer{
