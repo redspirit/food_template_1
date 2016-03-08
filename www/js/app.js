@@ -154,6 +154,13 @@ app.controller('MainController', function($scope, $http){
         console.log("cat", cat);
 
         $scope.active.comboStack[cat.showIn] = item;
+        if(cat.showIn == 4)
+            delete $scope.active.comboStack[3];
+        if(cat.showIn == 3) {
+            delete $scope.active.comboStack[4];
+            delete $scope.active.comboStack[5];
+        }
+
         $scope.currentNav = cat.next;
 
         if(cat.final)
